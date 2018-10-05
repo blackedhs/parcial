@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1538697662 source:/home/alumno/Descargas/fede/parcial/informes.c
+	"informes.h"
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+
+1538688507 source:/home/alumno/Descargas/fede/parcial/MAQUETA.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	"lib.h"
+
+1538688508 /home/alumno/Descargas/fede/parcial/utn.h
+
+1538688937 source:/home/alumno/Descargas/fede/parcial/utn.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
+1538699341 source:/home/alumno/Descargas/fede/parcial/clientes.c
+	"clientes.h"
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1538699351 /home/alumno/Descargas/fede/parcial/clientes.h
+
+1538699916 source:/home/alumno/Descargas/fede/parcial/main.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	"clientes.h"
+	"afiche.h"
+	"informes.h"
+
+1538699844 /home/alumno/Descargas/fede/parcial/afiche.h
+	"clientes.h"
+
+1538699921 source:/home/alumno/Descargas/fede/parcial/afiche.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"afiche.h"
+
+1538697683 /home/alumno/Descargas/fede/parcial/informes.h
+	"clientes.h"
+	"afiche.h"
+
