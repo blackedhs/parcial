@@ -11,6 +11,7 @@ static int getInt(int*pBuffer);
 static int isInt(char *pBuffer);
 static int isLetras(char*pBuffer);
 static int isEmail(char* pBuffer);
+static int isCuit(char* pBuffer);
 
 int utn_getEntero(int* pEntero,int reintentos,char* msg,char*msgError,int min,int max){
     int retorno = -1;
@@ -40,7 +41,7 @@ int utn_getFloat(float*pFloat,int reintentos,char* msg,char*msgError,float min,f
         do
         {
             reintentos--;
-            printf("%s: ",msg);
+            printf("%s",msg);
             if(getFloat(&buffer) == 0 && buffer >= min && buffer<=max){
                     *pFloat= buffer;
                     retorno = 0;
@@ -318,94 +319,35 @@ int utn_getEmial(char *pBuffer,int limite,int reintentos,char* msj,char*msjError
     }
     return retorno;
 }
-
-/** printPersona(Persona *pBuffer){
-    printf("\tNombre\taltura\tedad:\n\n");
-    printf("\t%s\t%.2f\t%d",pBuffer->nombre,pBuffer->altura,pBuffer->edad);
-    return 0;
-}
-int utn_altaPersona(Persona* pPersona,int reintentos,int lenString,int min,int max){
-    utn_getLetras(&pPersona->nombre,lenString,reintentos,"Ingrese el nombre : ","\n***ERROR INTENTE NUEVAMENTE***");
-    utn_getEntero(&pPersona->edad,reintentos,"Ingrese la edad: ","Error intente nuevamente : ",min,max);
-    utn_getFloat(&pPersona->altura,reintentos,"Ingrese su altura: ","Error amiguito: ",0,3);
-    return 0;
-}*/
-/**int cargaProducto(Producto* pBuffer,int indice){
-
-    utn_getLetras(pBuffer[indice].nombre,32,3,"Ingrese el nombre: ","Error");
-    printf("\nIngrese la descripcion: ");
-    getString(pBuffer[indice].descripcion,128);
-    utn_getFloat(&pBuffer[indice].precio,3,"Ingrese el precio: ","ERROR : ",0,99999);
-    pBuffer[indice].isEmpy=0;
-    pBuffer[indice].ID=obtenerID();
-    return 0;
-}
-int buscarIndiceVacio(Producto* pBuffer,int limite,int*indice){
-    int i;
+int utn_getCuit(char *pBuffer,int limite,int reintentos,char* msj,char*msjError){
     int retorno=-1;
-    for(i=0;i<limite;i++){
-        if(pBuffer[i].isEmpy==1){
-            *indice=i;
-            retorno=0;
-            break;
-        }
+    char buffer[limite];
+    if(pBuffer!=NULL && limite >0 && reintentos >=0){
+        do{
+            reintentos--;
+            printf("%s",msj);
+            if(getString(buffer,limite)==0 && isCuit(buffer)==0){
+                strncpy(pBuffer,buffer,limite);
+                retorno=0;
+                break;
+            }else
+                printf("%s",msjError);
+        }while(reintentos>=0);
     }
     return retorno;
 }
-int menuProductos(int*opcion){
-    int aux;
-        system("clear");
-        printf("1- Cargar un Producto\n");
-        printf("2- Imprimir lista de productos \n");
-        printf("3- Editar Producto\n");
-        printf("4- Borrar producto \n");
-        printf("5- Salir\n");
-        while(scanf("%d",&aux)==0||aux<1||aux>5){
-            __fpurge(stdin);
-            printf("Error ingrese una opcion valida\n");
-        }
-        *opcion=aux;
-    return 0;
-}
-
-int imprimirArray(Producto* pBuffer,int limite)
-{
+static int isCuit(char* pBuffer){
     int i;
-    system("clear");
-    for(i=0;i<limite;i++){
-        if(pBuffer[i].isEmpy==0){
-            printf("\nID: %d",pBuffer[i].ID);
-            printf("\tNombre: %s",pBuffer[i].nombre);
-            printf("\tDescripcion: %s",pBuffer[i].descripcion);
-            printf("\tPrecio: %.2f",pBuffer[i].precio);
+    int retorno=1;
+    if (pBuffer!=NULL && strlen(pBuffer)==11){
+        for(i=0;i<11;i++){
+            if(*(pBuffer+i)<48||*(pBuffer+i)>57){
+                break;
+            }
         }
     }
-    return 0;
-}
-int obtenerID(){
-    static int ID=0;
-    return ID++;
-}
-int busquedaPorID(Producto* pBuffer,int limite,int ID,int* indiceID){
-    int i;
-    int retorno=-1;
-    for (i=0;i<limite;i++){
-        if(pBuffer[i].ID==ID){
-            *indiceID=i;
-            retorno=0;
-            break;
-        }
+    if(i==11){
+        retorno=0;
     }
     return retorno;
 }
-int modificarProductoPorIndice(Producto* pBuffer,int indice){
-    utn_getLetras(pBuffer[indice].nombre,32,3,"Ingrese el nombre: ","Error");
-    utn_getFloat(&pBuffer[indice].precio,3,"Ingrese el precio: ","ERROR : ",0,99999);
-    pBuffer[indice].isEmpy=0;
-    return 0;
-}
-int borrarPorID(Producto* pBuffer,int indice){
-    pBuffer[indice].isEmpy=1;
-    return 0;
-}
-*/

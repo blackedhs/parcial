@@ -38,3 +38,4 @@ int utn_altaPersona(Persona* pPersona,int reintentos,int lenString,int min,int m
 int getString(char* pBuffer,int limite);
 int utn_getLetrasYNumeros(char* pBuffer,int limite,char* msj);
 int utn_getEmial(char *pBuffer,int limite,int reintentos,char* msj,char*msjError);
+int utn_getCuit(char *pBuffer,int limite,int reintentos,char* msj,char*msjError);

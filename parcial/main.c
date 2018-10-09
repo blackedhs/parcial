@@ -40,7 +40,7 @@ int main()
             case 1:
                 if(!utn_getLetras(auxNombre,50,3,"\nIngrese el nombre: ","\nError..El nombre debe contener solo letras")&&
                     !utn_getLetras(auxApellido,50,3,"\nIngrese el apellido: ","\nError..El apellido debe contener solo letras")&&
-                    !utn_getLetrasYNumeros(auxCuit,50,"Ingrese el cuit: ")){
+                    !utn_getCuit(auxCuit,50,3,"Ingrese el cuit: ","Error...Ingrese el cuit debe ingresarse solo con numero Cant 11")){
                         auxid=cli_obtenerID();
                         cli_alta(clientes,auxid,CANTIDADCLIENTES,auxApellido,auxNombre,auxCuit);
                         printf("Alta satisfactoria Nº de Id: %d",auxid);
@@ -107,7 +107,8 @@ int main()
                     }
                 break;
             case 7:
-                inf_impClientesAcobrar(clientes,CANTIDADCLIENTES,afiches,CANTIDADAFICHES);
+                //inf_impClientesAcobrar(clientes,CANTIDADCLIENTES,afiches,CANTIDADAFICHES);
+                inf_impCliByMayorOrMenorCanAfiches(afiches,CANTIDADAFICHES,clientes,CANTIDADCLIENTES,1,"\nEl que tiene menos afiches es: ");
                 getchar();
                 break;
         }

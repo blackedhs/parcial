@@ -60,3 +60,64 @@
 	"clientes.h"
 	"afiche.h"
 
+1539046914 source:/home/blackedhs/Programacion/parcial/parcial/afiche.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"afiche.h"
+
+1539045240 /home/blackedhs/Programacion/parcial/parcial/utn.h
+
+1539047564 /home/blackedhs/Programacion/parcial/parcial/afiche.h
+	"clientes.h"
+
+1539048676 /home/blackedhs/Programacion/parcial/parcial/clientes.h
+
+1539047615 source:/home/blackedhs/Programacion/parcial/parcial/clientes.c
+	"clientes.h"
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1539049053 source:/home/blackedhs/Programacion/parcial/parcial/informes.c
+	"informes.h"
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+
+1539048811 /home/blackedhs/Programacion/parcial/parcial/informes.h
+	"clientes.h"
+	"afiche.h"
+
+1539048900 source:/home/blackedhs/Programacion/parcial/parcial/main.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	"clientes.h"
+	"afiche.h"
+	"informes.h"
+
+1538933819 source:/home/blackedhs/Programacion/parcial/parcial/MAQUETA.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	"lib.h"
+
+1539045706 source:/home/blackedhs/Programacion/parcial/parcial/utn.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
