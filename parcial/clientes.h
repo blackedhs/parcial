@@ -62,4 +62,5 @@ int cli_existeId(Cliente* pbuffer,int limite,int id);
  */
 int cli_impById(Cliente* pBuffer,int limite,int idCliente);
 
+int cli_cantidadClientes(Cliente* pBuffer,int limite);
 #endif // CLIENTES_H_INCLUDED

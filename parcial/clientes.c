@@ -119,3 +119,15 @@ int cli_impById(Cliente* pBuffer,int limite,int idCliente){
     }
     return retorno;
 }
+int cli_cantidadClientes(Cliente* pBuffer,int limite){
+    int i;
+    int cantidad=0;
+    if(pBuffer!=NULL && limite>0){
+        for(i=0;i<limite;i++){
+            if(!pBuffer[i].isEmpty){
+            cantidad++;
+            }
+        }
+    }
+    return cantidad;
+}

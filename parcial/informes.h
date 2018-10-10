@@ -64,4 +64,53 @@ int inf_ordenarCliByNombre(Cliente* pBuffer,int limite,int flag);
             o no hay clientes a cobrar
  */
 int inf_impCliByMayorOrMenorCanAfiches(Afiche* pBufferAfi,int limiteAfi,Cliente* pBufferCli,int limiteCli,int flag,char* msj);
+
+/** \brief  imprime por pantalla el cliente con mas afiches a cobrar
+ *\param Cliente puntero al array clientes
+ *\param int limiteCli del array
+ *\param afiche puntero al array clientes
+ *\param int limiteAfi del array
+ * \return int Return comienza en 0 si esta todo bien y -1 si algun parametro es incorrecto
+            o no hay clientes a cobrar
+ */
+int inf_impCliByMayorAfichesACobrar(Afiche* pBufferAfi,int limiteAfi,Cliente* pBufferCli,int limiteCli,char* msj);
+
+/** \brief  imprime por pantalla el cliente con mas ventas a cobrar
+ *\param Cliente puntero al array clientes
+ *\param int limiteCli del array
+ *\param afiche puntero al array clientes
+ *\param int limiteAfi del array
+ * \return int Return comienza en 0 si esta todo bien y -1 si algun parametro es incorrecto
+            o no hay clientes a cobrar
+*/
+int inf_clienteMasACobrar(Afiche* pBufferAfi,int limiteAfi,Cliente* pBufferCli,int limiteCli);
+
+/** \brief  imprime por pantalla el cliente con mas ventas cobradas
+ *\param Cliente puntero al array clientes
+ *\param int limiteCli del array
+ *\param afiche puntero al array clientes
+ *\param int limiteAfi del array
+ * \return int Return comienza en 0 si esta todo bien y -1 si algun parametro es incorrecto
+            o no hay clientes a cobrar
+*/
+int inf_clienteMasCobradas(Afiche* pBufferAfi,int limiteAfi,Cliente* pBufferCli,int limiteCli);
+
+/** \brief  imprime por pantalla el cliente con mas ventas
+ *\param Cliente puntero al array clientes
+ *\param int limiteCli del array
+ *\param afiche puntero al array clientes
+ *\param int limiteAfi del array
+ * \return int Return comienza en 0 si esta todo bien y -1 si algun parametro es incorrecto
+            o no hay clientes a cobrar
+*/
+int inf_clienteMasventas(Afiche* pBufferAfi,int limiteAfi,Cliente* pBufferCli,int limiteCli);
+
+int inf_zonaMenosAfiVendidos(Afiche* pBuffer,int limite);
+
+int inf_cantidadConMenos100Afi(Afiche* pBufferAfi,int limiteAfi,Cliente* pBufferCli,int limiteCli);
+
+int inf_cantidadAfiByZona(Afiche* pBuffer,int limite);
+
+int inf_ordenarAfiByZona(Afiche* pBuffer,int limite,int flag);
+int inf_promedioAfichesByCliente(Afiche* pBufferAfi,int limiteAfi,Cliente* pBufferCli,int limiteCli);
 #endif // INFORMES_H_INCLUDED

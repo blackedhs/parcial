@@ -90,4 +90,32 @@ int afi_existeId(Afiche* pbuffer,int limite,int id);
  * \return int Return cantidad de afiches
  */
 int afi_cantidadDeAfichesByIdCliente(Afiche* pBuffer,int limite,int idCliente);
+
+/** \brief  retorna la cantidad de afiches que cliente a cobrar
+ *\param afiche puntero al array clientes
+ *\param int limite del array
+ *\param id numero de id del cliente
+ * \return int Return cantidad de afiches
+ */
+int afi_cantidadDeAfichesACobrarByIdCliente(Afiche* pBuffer,int limite,int idCliente);
+
+/** \brief  retorna la cantidad de ventas que tiene un clientecliente
+ *\param afiche puntero al array clientes
+ *\param int limite del array
+ *\param id numero de id del cliente
+ *\param int flag 0 a cobrar 1 cobrado
+ * \return int Return cantidad de ventas
+ */
+int afi_cantidadDeVentasByIdCliente(Afiche* pBuffer,int limite,int idCliente,int flag);
+
+/** \brief  retorna la cantidad de ventas que tiene un clientecliente
+ *\param afiche puntero al array clientes
+ *\param int limite del array
+ *\param id numero de id del cliente
+ * \return int Return cantidad de ventas
+ */
+int afi_cantidadDeVentasByIdTotales(Afiche* pBuffer,int limite,int idCliente);
+
+int afi_cantidadAfichesByZona(Afiche *pBuffer,int limite,int zona);
+int afi_cantidadAfiches(Afiche* pBuffer,int limite);
 #endif // AFICHE_H_INCLUDED

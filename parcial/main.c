@@ -24,10 +24,11 @@ int main()
     cli_inicializarArray(clientes,CANTIDADCLIENTES);
     afi_inicializarArray(afiches,CANTIDADAFICHES);
     afi_alta(afiches,0,CANTIDADAFICHES,100,2,"picazo");
-    afi_alta(afiches,1,CANTIDADAFICHES,1020,3,"picazo");
+    afi_alta(afiches,1,CANTIDADAFICHES,450,3,"picazo");
     afi_alta(afiches,2,CANTIDADAFICHES,10,3,"picazo");
     afi_alta(afiches,3,CANTIDADAFICHES,500,2,"picazo");
     afi_alta(afiches,3,CANTIDADAFICHES,600,1,"picazo");
+    afi_alta(afiches,3,CANTIDADAFICHES,500,1,"lala");
     cli_alta(clientes,cli_obtenerID(),CANTIDADCLIENTES,"andrade","juan","34152942");
     cli_alta(clientes,cli_obtenerID(),CANTIDADCLIENTES,"perez","pedro","152461535");
     cli_alta(clientes,cli_obtenerID(),CANTIDADCLIENTES,"mafia","lucia","22250452");
@@ -107,16 +108,39 @@ int main()
                     }
                 break;
             case 7:
-                //inf_impClientesAcobrar(clientes,CANTIDADCLIENTES,afiches,CANTIDADAFICHES);
-                inf_impCliByMayorOrMenorCanAfiches(afiches,CANTIDADAFICHES,clientes,CANTIDADCLIENTES,1,"\nEl que tiene menos afiches es: ");
+                inf_impClientesAcobrar(clientes,CANTIDADCLIENTES,afiches,CANTIDADAFICHES);
+                //inf_impCliByMayorOrMenorCanAfiches(afiches,CANTIDADAFICHES,clientes,CANTIDADCLIENTES,1,"\nEl que tiene menos afiches es: ");
                 getchar();
                 break;
+            case 8:
+                printf("\na)");
+                inf_clienteMasACobrar(afiches,CANTIDADAFICHES,clientes,CANTIDADCLIENTES);
+                printf("\nb)");
+                inf_clienteMasCobradas(afiches,CANTIDADAFICHES,clientes,CANTIDADAFICHES);
+                printf("\nc)");
+                inf_clienteMasventas(afiches,CANTIDADAFICHES,clientes,CANTIDADCLIENTES);
+                printf("\nd)");
+                inf_impCliByMayorAfichesACobrar(afiches,CANTIDADAFICHES,clientes,CANTIDADCLIENTES,"\nEl cliente con mas a cobrar es: ");
+                printf("\ne)");
+                inf_impCliByMayorOrMenorCanAfiches(afiches,CANTIDADAFICHES,clientes,CANTIDADCLIENTES,0,"\nEl que mas compro es: ");
+                printf("\nf)");
+                inf_zonaMenosAfiVendidos(afiches,CANTIDADAFICHES);
+                printf("\ng)");
+                inf_cantidadConMenos100Afi(afiches,CANTIDADAFICHES,clientes,CANTIDADCLIENTES);
+                printf("\nh)");
+                inf_cantidadAfiByZona(afiches,CANTIDADAFICHES);
+                printf("\ni)");
+                inf_ordenarAfiByZona(afiches,CANTIDADAFICHES,0);
+                afi_listar(afiches,CANTIDADAFICHES);
+                printf("\nj)");
+                inf_promedioAfichesByCliente(afiches,CANTIDADAFICHES,clientes,CANTIDADCLIENTES);
+                getchar();
         }
-    }while(opcion!=8);
+    }while(opcion!=9);
     return 0;
 }
 int menu(int*opcion){
-    printf("\n1-ALTAS\n2-MODIFICAR\n3-BAJA\n4-VENDER AFICHE\n5-EDITAR VENTA\n6-COBRAR VENTA\n7-IMPRIMIR CLIENTES\n8-SALIR");
+    printf("\n1-ALTAS\n2-MODIFICAR\n3-BAJA\n4-VENDER AFICHE\n5-EDITAR VENTA\n6-COBRAR VENTA\n7-IMPRIMIR CLIENTES\n8-INFORMAR\n9-SALIR");
     utn_getEntero(opcion,3,"\nIngrese una opcion: ","\nError...ingrese una opcion valida...",1,8);
     return 0;
 

@@ -165,12 +165,74 @@ int afi_existeId(Afiche* pBuffer,int limite,int id){
     }
     return retorno;
 }
+int afi_cantidadDeVentasByIdCliente(Afiche* pBuffer,int limite,int idCliente,int flag){
+    int i;
+    int cantidad=0;
+    if(pBuffer!=NULL&& limite >0){
+        for(i=0;i<limite;i++){
+            if(!pBuffer[i].isEmpty && ((!flag &&pBuffer[i].idCliente==idCliente && pBuffer[i].estado==1)||
+            ((flag && pBuffer[i].idCliente==idCliente && pBuffer[i].estado==0)))){
+                cantidad++;
+            }
+        }
+    }
+    return cantidad;
+}
+
 int afi_cantidadDeAfichesByIdCliente(Afiche* pBuffer,int limite,int idCliente){
     int i;
     int cantidad=0;
     if(pBuffer!=NULL&& limite >0){
         for(i=0;i<limite;i++){
-            if(!pBuffer[i].isEmpty &&pBuffer[i].idCliente==idCliente){
+            if(!pBuffer[i].isEmpty && pBuffer[i].idCliente==idCliente ){
+                cantidad+=pBuffer[i].canAfiches;
+            }
+        }
+    }
+    return cantidad;
+}
+int afi_cantidadDeAfichesACobrarByIdCliente(Afiche* pBuffer,int limite,int idCliente){
+    int i;
+    int cantidad=0;
+    if(pBuffer!=NULL&& limite >0){
+        for(i=0;i<limite;i++){
+            if(!pBuffer[i].isEmpty && pBuffer[i].idCliente==idCliente && pBuffer[i].estado==1){
+                cantidad+=pBuffer[i].canAfiches;
+            }
+        }
+    }
+    return cantidad;
+}
+int afi_cantidadDeVentasByIdTotales(Afiche* pBuffer,int limite,int idCliente){
+    int i;
+    int cantidad=0;
+    if(pBuffer!=NULL&& limite >0){
+        for(i=0;i<limite;i++){
+            if(!pBuffer[i].isEmpty && pBuffer[i].idCliente==idCliente ){
+                cantidad++;
+            }
+        }
+    }
+    return cantidad;
+}
+int afi_cantidadAfichesByZona(Afiche *pBuffer,int limite,int zona){
+    int i;
+    int cantidad=0;
+    if(pBuffer!=NULL&& limite >0){
+        for(i=0;i<limite;i++){
+            if(!pBuffer[i].isEmpty && pBuffer[i].zona== zona){
+                cantidad+=pBuffer[i].canAfiches;
+            }
+        }
+    }
+    return cantidad;
+}
+int afi_cantidadAfiches(Afiche* pBuffer,int limite){
+    int i;
+    int cantidad=0;
+    if(pBuffer!=NULL&& limite >0){
+        for(i=0;i<limite;i++){
+            if(!pBuffer[i].isEmpty){
                 cantidad+=pBuffer[i].canAfiches;
             }
         }

@@ -121,3 +121,64 @@
 	<time.h>
 	"utn.h"
 
+1539213868 source:/home/alumno/Escritorio/fede/parcial/parcial/afiche.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+	"afiche.h"
+
+1539206895 /home/alumno/Escritorio/fede/parcial/parcial/utn.h
+
+1539214057 /home/alumno/Escritorio/fede/parcial/parcial/afiche.h
+	"clientes.h"
+
+1539214048 /home/alumno/Escritorio/fede/parcial/parcial/clientes.h
+
+1539213747 source:/home/alumno/Escritorio/fede/parcial/parcial/clientes.c
+	"clientes.h"
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1539214033 source:/home/alumno/Escritorio/fede/parcial/parcial/informes.c
+	"informes.h"
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+
+1539214071 /home/alumno/Escritorio/fede/parcial/parcial/informes.h
+	"clientes.h"
+	"afiche.h"
+
+1539213165 source:/home/alumno/Escritorio/fede/parcial/parcial/main.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	"clientes.h"
+	"afiche.h"
+	"informes.h"
+
+1539206895 source:/home/alumno/Escritorio/fede/parcial/parcial/MAQUETA.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+	"lib.h"
+
+1539206895 source:/home/alumno/Escritorio/fede/parcial/parcial/utn.c
+	<stdio_ext.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"utn.h"
+
